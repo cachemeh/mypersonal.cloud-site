@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mypersonal.cloud — Domain for Sale</title>
+  <meta name="description" content="mypersonal.cloud is a premium domain name for a personal cloud, privacy, or self-hosted storage brand. Available for purchase." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #141312;
+      --panel: rgba(255,255,255,0.04);
+      --panel2: rgba(255,255,255,0.03);
+      --text: #eee7de;
+      --muted: #b7afa5;
+      --muted2:#9a9187;
+      --accent:#d4a373;   /* warm amber */
+      --accent2:#8ecae6;  /* soft sky */
+      --stroke: rgba(212,163,115,0.18);
+      --stroke2: rgba(142,202,230,0.14);
+      --shadow: 0 16px 50px rgba(0,0,0,0.45);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      background: radial-gradient(1200px 700px at 20% 0%, rgba(212,163,115,0.12), transparent 55%),
+                  radial-gradient(1200px 700px at 85% 10%, rgba(142,202,230,0.10), transparent 55%),
+                  radial-gradient(800px 600px at 50% 100%, rgba(255,255,255,0.05), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      overflow-x:hidden;
+    }
+
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+
+    /* Top bar */
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.02);
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 240px;
+    }
+    .mark{
+      width:38px; height:38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(212,163,115,0.9), rgba(142,202,230,0.9));
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      position: relative;
+      overflow:hidden;
+    }
+    .mark:before{
+      content:"";
+      position:absolute;
+      inset:-30%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.55), transparent 55%);
+      transform: rotate(18deg);
+    }
+    .domain{
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      line-height: 1.1;
+    }
+    .sub{
+      color: var(--muted2);
+      font-size: 0.92rem;
+      margin-top: 2px;
+    }
+    .pill{
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.82rem;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,163,115,0.22);
+      background: rgba(212,163,115,0.06);
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .btn{
+      appearance:none;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor:pointer;
+      text-decoration:none;
+      font-weight: 600;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: rgba(255,255,255,0.18); background: rgba(255,255,255,0.06); }
+    .btn.primary{
+      border-color: rgba(212,163,115,0.30);
+      background: rgba(212,163,115,0.14);
+    }
+    .btn.primary:hover{ border-color: rgba(212,163,115,0.46); background: rgba(212,163,115,0.18); }
+
+    /* Hero */
+    .hero{
+      margin-top: 20px;
+      display:grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero-main{
+      padding: 28px 24px;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 8px 10px;
+      border-radius: 999px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius: 99px;
+      background: rgba(212,163,115,0.95);
+      box-shadow: 0 0 0 6px rgba(212,163,115,0.12);
+    }
+    h1{
+      margin: 16px 0 10px;
+      font-size: clamp(2.0rem, 2.6vw, 3.0rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .lead{
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      max-width: 60ch;
+    }
+
+    .badges{
+      margin-top: 18px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .badge{
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.82rem;
+      color: var(--muted);
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+    }
+    .badge strong{ color: var(--text); font-weight: 600; }
+
+    .hero-side{
+      padding: 20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .price{
+      padding: 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(212,163,115,0.22);
+      background: rgba(212,163,115,0.08);
+    }
+    .price .label{
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-bottom: 6px;
+    }
+    .price .value{
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .price .note{
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Inline graphic panel */
+    .graphic{
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .graphic-title{
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: var(--muted2);
+      font-size: 0.86rem;
+      margin: 0 0 12px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .graphic svg{ width:100%; height:auto; display:block; }
+
+    /* Sections */
+    .grid{
+      margin-top: 16px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 980px){ .grid{ grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px){ .grid{ grid-template-columns: 1fr; } }
+
+    .mini{
+      padding: 18px 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+    }
+    .mini h3{
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+    .mini p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+    .icon{
+      width: 34px; height: 34px;
+      border-radius: 12px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 10px;
+    }
+    .icon svg{ width: 18px; height: 18px; opacity: 0.9; }
+
+    /* Footer */
+    .footer{
+      margin-top: 18px;
+      padding: 18px 10px;
+      color: var(--muted2);
+      text-align:center;
+      font-size: 0.92rem;
+    }
+    .footer a{ color: var(--text); text-decoration: none; border-bottom: 1px dashed rgba(212,163,115,0.45); }
+    .footer a:hover{ border-bottom-color: rgba(212,163,115,0.75); }
+
+    /* Decorative blob */
+    .blob{
+      position:absolute;
+      inset:auto -240px -260px auto;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle at 30% 30%, rgba(142,202,230,0.18), transparent 55%),
+                  radial-gradient(circle at 60% 60%, rgba(212,163,115,0.18), transparent 58%);
+      filter: blur(2px);
+      transform: rotate(18deg);
+      pointer-events:none;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <div class="domain">mypersonal.cloud</div>
+          <div class="sub">Premium domain — available for acquisition</div>
+        </div>
+      </div>
+
+      <div class="pill">FOR SALE</div>
+
+      <div class="actions">
+        <!-- Update these -->
+        <a class="btn" href="#use-cases">Use cases</a>
+        <a class="btn primary" href="mailto:YOUR_EMAIL_HERE?subject=mypersonal.cloud%20Domain%20Inquiry&body=Hi%2C%0A%0AI%27m%20interested%20in%20mypersonal.cloud.%20Please%20share%20pricing%20and%20purchase%20details.%0A%0AThanks%2C">Make an offer</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="card hero-main">
+        <div class="blob" aria-hidden="true"></div>
+
+        <div class="kicker"><span class="dot"></span> Domain available • High-intent brand name</div>
+        <h1>Build the personal cloud brand people instantly understand.</h1>
+        <p class="lead">
+          <strong>mypersonal.cloud</strong> is a clean, consumer-friendly domain that fits products focused on
+          privacy, personal storage, self-hosting, backups, and “own your data” messaging.
+          It’s short, memorable, and reads like a product category — not a random string.
+        </p>
+
+        <div class="badges">
+          <div class="badge"><strong>Perfect for:</strong> privacy & storage</div>
+          <div class="badge"><strong>Also fits:</strong> NAS / backup / sync</div>
+          <div class="badge"><strong>Great for:</strong> consumer SaaS positioning</div>
+        </div>
+      </div>
+
+      <aside class="card hero-side">
+        <div class="price">
+          <div class="label">Asking price</div>
+          <div class="value">$25,000</div>
+          <div class="note">
+            Serious inquiries only. Open to reasonable offers and fast escrow-based closing.
+          </div>
+        </div>
+
+        <div class="graphic">
+          <p class="graphic-title">
+            <span style="width:10px;height:10px;border-radius:99px;background:rgba(142,202,230,0.9);box-shadow:0 0 0 6px rgba(142,202,230,0.12)"></span>
+            Brand concept
+          </p>
+
+          <!-- Inline SVG "cloud + lock + devices" graphic -->
+          <svg viewBox="0 0 520 320" role="img" aria-label="Personal cloud concept graphic">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="rgba(212,163,115,0.95)"/>
+                <stop offset="1" stop-color="rgba(142,202,230,0.95)"/>
+              </linearGradient>
+              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="10" result="b"/>
+                <feMerge>
+                  <feMergeNode in="b"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Glow -->
+            <circle cx="120" cy="90" r="70" fill="rgba(212,163,115,0.14)" filter="url(#soft)"/>
+            <circle cx="400" cy="90" r="70" fill="rgba(142,202,230,0.12)" filter="url(#soft)"/>
+
+            <!-- Cloud -->
+            <path d="M170 195c-22 0-40-16-40-36 0-16 11-30 27-35 6-28 33-49 66-49 29 0 54 16 63 39 4-1 9-2 14-2 25 0 46 18 46 41 0 23-20 42-46 42H170z"
+                  fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.10)" stroke-width="2"/>
+
+            <!-- Lock inside cloud -->
+            <rect x="248" y="142" width="72" height="58" rx="12" fill="rgba(212,163,115,0.12)" stroke="rgba(212,163,115,0.28)" stroke-width="2"/>
+            <path d="M265 142v-10c0-16 12-28 28-28s28 12 28 28v10" fill="none" stroke="rgba(142,202,230,0.45)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="284" cy="171" r="6" fill="rgba(255,255,255,0.70)"/>
+            <path d="M284 177v12" stroke="rgba(255,255,255,0.70)" stroke-width="3" stroke-linecap="round"/>
+
+            <!-- Devices -->
+            <rect x="78" y="220" width="120" height="70" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+            <rect x="94" y="234" width="88" height="38" rx="10" fill="rgba(255,255,255,0.04)"/>
+            <rect x="312" y="222" width="130" height="64" rx="14" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+            <rect x="330" y="236" width="94" height="34" rx="10" fill="rgba(255,255,255,0.04)"/>
+
+            <!-- Connection lines -->
+            <path d="M170 220c35-30 80-40 115-40s80 10 128 42" fill="none" stroke="url(#g1)" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+            <path d="M206 214c28-22 58-30 79-30s53 8 90 31" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+            <span class="badge">Own your data</span>
+            <span class="badge">Private by default</span>
+            <span class="badge">Cloud you control</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="use-cases" class="grid" aria-label="Use cases">
+      <div class="mini">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M7 17h10M8 13h8M9 9h6" stroke="rgba(212,163,115,0.85)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 6.5C6 5.1 7.1 4 8.5 4h7C17.9 4 19 5.1 19 6.5v11C19 18.9 17.9 20 16.5 20h-7C7.1 20 6 18.9 6 17.5v-11Z" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Personal cloud SaaS</h3>
+        <p>
+          A consumer-facing storage/sync product that emphasizes simplicity:
+          “Your cloud. Your rules.” Great for onboarding, pricing pages, and app-store branding.
+        </p>
+      </div>
+
+      <div class="mini">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3l8 4.5v5c0 5-3.5 9-8 9s-8-4-8-9v-5L12 3Z" stroke="rgba(142,202,230,0.85)" stroke-width="2"/>
+            <path d="M9 12l2 2 4-5" stroke="rgba(255,255,255,0.70)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Privacy & security brand</h3>
+        <p>
+          Ideal for a privacy company offering encrypted backups, secure photo storage,
+          or “zero-knowledge” cloud. The name instantly communicates trust.
+        </p>
+      </div>
+
+      <div class="mini">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="rgba(255,255,255,0.22)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M7 7v10M17 7v10" stroke="rgba(212,163,115,0.55)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>NAS + home server products</h3>
+        <p>
+          Great fit for a NAS vendor, homelab product, or “personal cloud box” concept.
+          Works on packaging, documentation, and marketing campaigns.
+        </p>
+      </div>
+
+      <div class="mini">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M7 20h10M9 16h6" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M8 4h8a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3Z" stroke="rgba(142,202,230,0.55)" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Backup & recovery</h3>
+        <p>
+          Use this for a backup platform that targets individuals, families, and creators:
+          photos, documents, device backups, and ransomware-safe vaults.
+        </p>
+      </div>
+
+      <div class="mini">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M8 12h8M12 8v8" stroke="rgba(212,163,115,0.85)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 6.5C4 5.1 5.1 4 6.5 4h11C19 4 20 5.1 20 6.5v11C20 18.9 19 20 17.5 20h-11C5.1 20 4 18.9 4 17.5v-11Z" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Creator storage</h3>
+        <p>
+          Perfect for a personal cloud aimed at photographers, editors, and streamers:
+          fast sync, easy sharing, and reliable versioning without “big tech” vibes.
+        </p>
+      </div>
+
+      <div class="mini">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M8 11c0-2.2 1.8-4 4-4s4 1.8 4 4v7H8v-7Z" stroke="rgba(142,202,230,0.75)" stroke-width="2"/>
+            <path d="M10 11V9.7C10 8.2 11.2 7 12.7 7H13" stroke="rgba(255,255,255,0.20)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 14v2" stroke="rgba(255,255,255,0.70)" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Identity + vault tooling</h3>
+        <p>
+          Great for password vault extensions, secure identity lockers, and family data vault products.
+          The domain reinforces “personal” + “cloud” instantly.
+        </p>
+      </div>
+    </section>
+
+    <div class="footer">
+      Interested in acquiring <strong>mypersonal.cloud</strong>? Email
+      <a href="mailto:YOUR_EMAIL_HERE?subject=mypersonal.cloud%20Domain%20Inquiry">YOUR_EMAIL_HERE</a>
+      for details. Escrow-friendly.
+      <br/><br/>
+      © 2026 mypersonal.cloud
+    </div>
+  </div>
+</body>
+</html>
