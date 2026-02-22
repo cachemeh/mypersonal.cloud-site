@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="mypersonal.cloud is for sale — Asking $25,000 or reasonable offers." />
+  <title>mypersonal.cloud — For Sale</title>
+
+  <style>
+    :root{
+      --bg:#070A12;
+      --fg:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.66);
+      --card:rgba(255,255,255,.06);
+      --border:rgba(255,255,255,.12);
+      --accent:#7CEBFF;
+      --accent2:#B784FF;
+      --radius:1.125rem; /* 18px */
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(43.75rem 26.25rem at 15% 20%, rgba(124,235,255,.14), transparent 60%),
+        radial-gradient(43.75rem 26.25rem at 85% 25%, rgba(183,132,255,.12), transparent 60%),
+        linear-gradient(180deg, #050812, var(--bg));
+    }
+
+    .page{
+      height:100vh;               /* 100vh, no scroll */
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:1.125rem;
+      overflow:hidden;            /* guarantee no scrolling */
+    }
+
+    .card{
+      width:min(57.5rem, 100%);
+      border:0.0625rem solid var(--border);
+      background:linear-gradient(180deg, var(--card), rgba(255,255,255,.03));
+      border-radius:var(--radius);
+      padding:1.375rem;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card:before{
+      content:"";
+      position:absolute;
+      inset:-0.125rem;
+      border-radius:calc(var(--radius) + 0.125rem);
+      background: radial-gradient(75rem 18.75rem at 50% -30%, rgba(124,235,255,.12), transparent 60%);
+      pointer-events:none;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:0.75rem;
+      position:relative;
+      z-index:1;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:0.625rem;
+    }
+
+    .mark{
+      width:2.125rem;height:2.125rem;border-radius:0.75rem;
+      background: linear-gradient(135deg, rgba(124,235,255,.95), rgba(183,132,255,.92));
+      box-shadow: 0 0.625rem 1.75rem rgba(124,235,255,.10);
+      position:relative;
+      flex:0 0 2.125rem;
+    }
+    .mark:after{
+      content:"";
+      position:absolute;
+      inset:0.125rem;
+      border-radius:0.625rem;
+      border:0.0625rem solid rgba(255,255,255,.18);
+    }
+
+    .domain{
+      font-weight:750;
+      letter-spacing:.2px;
+      line-height:1.1;
+    }
+
+    .pill{
+      font-size:0.75rem;
+      color:var(--muted);
+      border:0.0625rem solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      padding:0.375rem 0.625rem;
+      border-radius:999px;
+      white-space:nowrap;
+    }
+
+    main{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:1.125rem;
+      margin-top:1rem;
+      position:relative;
+      z-index:1;
+    }
+
+    @media (max-width: 53.75rem){
+      main{grid-template-columns:1fr}
+      header{flex-direction:column; align-items:flex-start}
+      .pill{align-self:flex-start}
+    }
+
+    h1{
+      margin:0 0 0.5rem;
+      font-size: clamp(1.875rem, 4vw, 2.75rem);
+      letter-spacing:-.6px;
+      line-height:1.05;
+    }
+
+    .grad{
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .sub{
+      margin:0;
+      color:var(--muted);
+      line-height:1.55;
+      font-size:0.9375rem;
+      max-width:62ch;
+    }
+
+    .actions{
+      display:flex;
+      gap:0.625rem;
+      flex-wrap:wrap;
+      margin-top:0.875rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:0.625rem;
+      padding:0.6875rem 0.75rem;
+      border-radius:0.875rem;
+      border:0.0625rem solid rgba(255,255,255,.16);
+      background:rgba(255,255,255,.05);
+      color:var(--fg);
+      text-decoration:none;
+      font-weight:650;
+      letter-spacing:.2px;
+      cursor:pointer;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+      user-select:none;
+      min-width: 10rem;
+    }
+    .btn:hover{transform: translateY(-0.0625rem); background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.22);}
+    .btn:active{transform: translateY(0);}
+
+    .primary{
+      border-color: rgba(124,235,255,.32);
+      background: linear-gradient(135deg, rgba(124,235,255,.18), rgba(183,132,255,.14));
+    }
+    .primary:hover{
+      border-color: rgba(124,235,255,.48);
+      background: linear-gradient(135deg, rgba(124,235,255,.24), rgba(183,132,255,.18));
+    }
+
+    .side{
+      border:0.0625rem solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.035);
+      border-radius:var(--radius);
+      padding:1rem;
+      display:flex;
+      flex-direction:column;
+      gap:0.625rem;
+    }
+
+    .label{
+      font-size:0.75rem;
+      color:var(--muted);
+      letter-spacing:.24em;
+      text-transform:uppercase;
+    }
+
+    .price{
+      font-size: 2.375rem;
+      font-weight:800;
+      letter-spacing:-.6px;
+      margin-top:-0.25rem;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:0.84375rem;
+      line-height:1.5;
+    }
+
+    .meta{
+      margin-top:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:0.625rem;
+      padding-top:0.625rem;
+      border-top:0.0625rem solid rgba(255,255,255,.10);
+      color: rgba(255,255,255,.55);
+      font-size:0.78125rem;
+    }
+
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size:0.75rem;
+      padding:0.125rem 0.5rem;
+      border-radius:0.625rem;
+      border:0.0625rem solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      color: rgba(255,255,255,.72);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="card" role="main" aria-label="Domain for sale">
+      <header>
+        <div class="brand">
+          <div class="mark" aria-hidden="true"></div>
+          <div class="domain">mypersonal.cloud</div>
+        </div>
+        <div class="pill">Premium domain • For sale</div>
+      </header>
+
+      <main>
+        <section>
+          <h1>Your next brand: <span class="grad">mypersonal.cloud</span></h1>
+          <p class="sub">
+            Short, memorable, and built for products around personal cloud, private storage,
+            digital identity, security, and “your data, your rules.”
+          </p>
+
+          <div class="actions">
+            <!-- Replace email if you want -->
+            <a class="btn primary"
+               href="mailto:offers@pipp.dev?subject=Offer%20for%20mypersonal.cloud&body=Hi%2C%0A%0AI%27m%20interested%20in%20mypersonal.cloud.%0A%0AMy%20offer%3A%20%24_____%0ATimeline%3A%20_____%0A%0AThanks!">
+              Make an offer
+            </a>
+
+          </div>
+        </section>
+
+        <aside class="side" aria-label="Pricing">
+          <div class="label">Asking price</div>
+          <div class="price">$25,000</div>
+          <div class="note">or <strong>reasonable offers</strong>.</div>
+
+          <div class="note">
+            Secure transfer via reputable escrow on request.
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+
+</body>
+</html>
