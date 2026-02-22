@@ -258,7 +258,6 @@
               Make an offer
             </a>
 
-            <button class="btn" type="button" onclick="copyDomain()">Copy domain</button>
           </div>
         </section>
 
@@ -275,53 +274,6 @@
     </div>
   </div>
 
-  <script>
-    function copyDomain(){
-      const text = "mypersonal.cloud";
-      if (navigator.clipboard && window.isSecureContext){
-        navigator.clipboard.writeText(text).then(() => toast("Copied")).catch(() => fallbackCopy(text));
-      } else {
-        fallbackCopy(text);
-      }
-    }
 
-    function fallbackCopy(text){
-      const ta = document.createElement("textarea");
-      ta.value = text;
-      ta.style.position = "fixed";
-      ta.style.left = "-9999px";
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand("copy"); toast("Copied"); }
-      catch(e){ toast("Copy failed"); }
-      document.body.removeChild(ta);
-    }
-
-    function toast(msg){
-      let t = document.getElementById("toast");
-      if(!t){
-        t = document.createElement("div");
-        t.id = "toast";
-        t.style.position = "fixed";
-        t.style.bottom = "16px";
-        t.style.left = "50%";
-        t.style.transform = "translateX(-50%)";
-        t.style.padding = "10px 14px";
-        t.style.borderRadius = "999px";
-        t.style.background = "rgba(0,0,0,.55)";
-        t.style.border = "1px solid rgba(255,255,255,.18)";
-        t.style.backdropFilter = "blur(10px)";
-        t.style.color = "rgba(255,255,255,.9)";
-        t.style.fontSize = "13px";
-        t.style.zIndex = "9999";
-        document.body.appendChild(t);
-      }
-      t.textContent = msg;
-      t.style.opacity = "1";
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(() => { t.style.opacity = "0"; }, 1400);
-    }
-  </script>
 </body>
 </html>
-
