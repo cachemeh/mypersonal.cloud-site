@@ -4,7 +4,7 @@ A simple static landing page for the **mypersonal.cloud** domain, which is curre
 
 ## Overview
 
-This project is a lightweight, single-page HTML site designed to present the domain as a premium brand opportunity for products related to personal cloud storage, private data, digital identity, and security.
+This project is a lightweight, single-page HTML site designed to present the domain as a premium brand opportunity for products related to personal cloud storage, private data, digital identity, and security. This page is hosted via Cloudflare Pages.
 
 ## Features
 
