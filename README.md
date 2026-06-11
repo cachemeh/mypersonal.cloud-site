@@ -11,7 +11,8 @@ The site is a lightweight, single-page marketing page meant to position the doma
 ```text
 .
 ├── index.html
-└── styles.css
+├── styles.css
+└── favicon.png
 ```
 
 ## Deployment
