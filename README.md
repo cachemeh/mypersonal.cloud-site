@@ -1,23 +1,22 @@
-# mypersonal.cloud Site
+# mypersonal.cloud
 
-A simple static landing page for the **mypersonal.cloud** domain, which is currently listed for sale.
+Static landing page for the **mypersonal.cloud** domain, currently listed for sale.
 
 ## Overview
 
-This project is a lightweight, single-page HTML site designed to present the domain as a premium brand opportunity for products related to personal cloud storage, private data, digital identity, and security. This page is hosted via Cloudflare Pages.
+The site is a lightweight, single-page marketing page meant to position the domain as a brand fit for products around personal cloud, private storage, digital identity, security, and ownership of data. It uses plain HTML and CSS with no build step or runtime dependencies.
 
-## Features
-
-* Just a static HTML landing page
-* No build process or dependencies
-* Simple domain-for-sale call to action
-
-## Project Structure
+## Current Structure
 
 ```text
 .
-└── index.html
+├── index.html
+└── styles.css
 ```
+
+## Deployment
+
+This site can be served as a static site directly from the repository, including through Cloudflare Pages or any other static host.
 
 ## License
 
